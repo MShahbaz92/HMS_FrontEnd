@@ -1,0 +1,27 @@
+<div class="appointment-table-container">
+    <h2>Appointments List</h2>
+    <table class="appointment-table">
+      <thead>
+        <tr>
+          <th>Appointment ID</th>
+          <th>Patient ID</th>
+          <th>Doctor ID</th>
+          <th>Appointment Date</th>
+          <th>Purpose</th>
+          <th>Is Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (appointment of appointment; track appointment) {
+          <tr>
+            <td>{{ appointment.AppointmentId }}</td>
+            <td>{{ appointment.PatientId }}</td>
+            <td>{{ appointment.DoctorId }}</td>
+            <td>{{ appointment.AppointmentDate.toDateString() }}</td>
+            <td>{{ appointment.Purpose }}</td>
+            <td>{{ appointment.IsCompleted ? "Yes" : "No" }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>

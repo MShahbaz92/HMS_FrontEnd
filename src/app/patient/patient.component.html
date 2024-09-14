@@ -1,0 +1,42 @@
+<div class="patient-table-container">
+    <h2>Patients List</h2>
+    <table class="patient-table">
+      <thead>
+        <tr>
+          <th>Patient ID</th>
+          <th>Patient Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Contact Number</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Doctor ID</th>
+          <th>Admission Date</th>
+          <th>Discharge Date</th>
+          <th>Is Active</th>
+          <th>Profile Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (patient of patients; track patient) {
+            <tr>
+                <td>{{ patient.PatientId }}</td>
+                <td>{{ patient.PatientName }}</td>
+                <td>{{ patient.PatientAge }}</td>
+                <td>{{ patient.PatientGender }}</td>
+                <td>{{ patient.PatientContactNumber }}</td>
+                <td>{{ patient.PatientEmail }}</td>
+                <td>{{ patient.PatientAddress }}</td>
+                <td>{{ patient.DoctorId }}</td>
+                <td>{{ patient.AdmissionDate ? patient.AdmissionDate.toDateString() : "N/A" }}</td>
+                <td>{{ patient.DischargeDate ? patient.DischargeDate.toDateString() : "N/A" }}</td>
+                <td>{{ patient.IsActive ? "Yes" : "No" }}</td>
+                <td>
+                    <img src="/images/{{ patient.ProfilePictureId }}" alt="Profile Picture" width="50" height="50">
+                </td>
+            </tr>
+        }
+      </tbody>
+    </table>
+</div>
+
