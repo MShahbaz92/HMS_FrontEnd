@@ -1,43 +1,49 @@
 {
-  "hash": "268e27da",
-  "configHash": "67d98de7",
-  "lockfileHash": "48619209",
-  "browserHash": "6e193d65",
+  "hash": "5cd83c54",
+  "configHash": "40b3320c",
+  "lockfileHash": "80d29854",
+  "browserHash": "ddd63572",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "c03b60b2",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "0b2653b5",
+      "fileHash": "c2ec28b3",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "81064f43",
+      "fileHash": "3d5afd7a",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "1b03ea19",
+      "fileHash": "f9c94dc5",
       "needsInterop": false
     },
-    "@angular/common": {
-      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
-      "file": "@angular_common.js",
-      "fileHash": "b3c37c3b",
+    "@ng-bootstrap/ng-bootstrap": {
+      "src": "../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
+      "file": "@ng-bootstrap_ng-bootstrap.js",
+      "fileHash": "e27bceaf",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6IGGNZOG": {
-      "file": "chunk-6IGGNZOG.js"
+    "chunk-KY3TK4ZO": {
+      "file": "chunk-KY3TK4ZO.js"
     },
-    "chunk-42HI5PUK": {
-      "file": "chunk-42HI5PUK.js"
+    "chunk-EPUY6HGS": {
+      "file": "chunk-EPUY6HGS.js"
     },
-    "chunk-LF2LKXYJ": {
-      "file": "chunk-LF2LKXYJ.js"
+    "chunk-IH7VTFNE": {
+      "file": "chunk-IH7VTFNE.js"
     }
   }
 }

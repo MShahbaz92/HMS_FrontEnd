@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SeedsServiceService } from '../services/seeds-service.service';
+import { IPatient, SeedsServiceService } from '../services/seeds-service.service';
 
 @Component({
   selector: 'app-patient',
@@ -9,7 +9,13 @@ import { SeedsServiceService } from '../services/seeds-service.service';
   styleUrl: './patient.component.css'
 })
 export class PatientComponent {
-patients: any;
+  Dummy(alertMessage: string) {
+    alert(alertMessage); // Show the alert with the provided message
+    
+    
+  }
+  
+patients: IPatient[] = [];
 
 
 constructor(private seedsService : SeedsServiceService) {

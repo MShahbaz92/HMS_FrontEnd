@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SeedsServiceService } from '../services/seeds-service.service';
+import { IAppointment, SeedsServiceService } from '../services/seeds-service.service';
 
 @Component({
   selector: 'app-appointment',
@@ -9,7 +9,7 @@ import { SeedsServiceService } from '../services/seeds-service.service';
   styleUrl: './appointment.component.css'
 })
 export class AppointmentComponent {
-appointment : any;
+appointment :  IAppointment[]=[];
 
 /**
  *

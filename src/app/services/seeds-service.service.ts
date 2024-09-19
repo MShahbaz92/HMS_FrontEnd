@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
+ import { Injectable } from '@angular/core';
+import { Address } from 'node:cluster';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeedsServiceService {
 
-  public GetDoctor(): object {
+  public GetDoctor(): IDoctor[] {
     const doctors = [{
      "DoctorId": "1",
      "DoctorName": "Dr Amjad",
@@ -20,7 +21,7 @@ export class SeedsServiceService {
     ];
     return doctors;
   }
-  public GetPatient(): object {
+  public GetPatient(): IPatient[] {
     const patients = [
       {
         "PatientId": "123e4567-e89b-12d3-a456-426614174001",
@@ -53,7 +54,7 @@ export class SeedsServiceService {
     ];
     return patients;
   };
-  public GetAppointment(): object {
+  public GetAppointment(): IAppointment[] {
     const appointments = [
       {
         "AppointmentId": "123e4567-e89b-12d3-a456-426614174001",
@@ -74,5 +75,45 @@ export class SeedsServiceService {
     ];
     return appointments;
   }
+  
 
 }
+
+// Interface for Doctor
+export interface IDoctor {
+  DoctorId: string;
+  DoctorName: string;
+  DoctorSpecialization: number; // Assuming this corresponds to an enum
+  DoctorExperience: number;
+  DoctorContactNumber: string;
+  DoctorEmail: string;
+  DepartmentId: string;
+  IsActive: boolean;
+}
+
+// Interface for Patient
+export interface IPatient {
+  PatientId: string;
+  PatientName: string;
+  PatientAge: number;
+  PatientGender: string;
+  PatientContactNumber: string;
+  PatientEmail: string;
+  PatientAddress: string;
+  DoctorId: string;
+  AdmissionDate: string;
+  DischargeDate: string | null; // Allows null for not yet discharged patients
+  IsActive: boolean;
+  ProfilePictureId: string;
+}
+
+// Interface for Appointment
+export interface IAppointment {
+  AppointmentId: string;
+  PatientId: string;
+  DoctorId: string;
+  AppointmentDate: string;
+  Purpose: string;
+  IsCompleted: boolean;
+}
+

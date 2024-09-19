@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SeedsServiceService } from '../services/seeds-service.service';
+import { IDoctor, SeedsServiceService } from '../services/seeds-service.service';
 
 @Component({
   selector: 'app-doctor',
@@ -9,7 +9,7 @@ import { SeedsServiceService } from '../services/seeds-service.service';
   styleUrl: './doctor.component.css'
 })
 export class DoctorComponent {
-doctors: any;
+doctors: IDoctor[] = [];
 
 name: string ='Shahbaz';
   constructor(private seedsService : SeedsServiceService) {

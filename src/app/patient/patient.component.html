@@ -1,5 +1,10 @@
 <div class="patient-table-container">
     <h2>Patients List</h2>
+    <button type="button" class="btn btn-success">Success</button>
+
+    <input (click)="Dummy('Hello')"
+    
+    />
     <table class="patient-table">
       <thead>
         <tr>
@@ -28,8 +33,8 @@
                 <td>{{ patient.PatientEmail }}</td>
                 <td>{{ patient.PatientAddress }}</td>
                 <td>{{ patient.DoctorId }}</td>
-                <td>{{ patient.AdmissionDate ? patient.AdmissionDate.toDateString() : "N/A" }}</td>
-                <td>{{ patient.DischargeDate ? patient.DischargeDate.toDateString() : "N/A" }}</td>
+                <td>{{ patient.AdmissionDate  }}</td>
+                <td>{{ patient.DischargeDate }}</td>
                 <td>{{ patient.IsActive ? "Yes" : "No" }}</td>
                 <td>
                     <img src="/images/{{ patient.ProfilePictureId }}" alt="Profile Picture" width="50" height="50">
